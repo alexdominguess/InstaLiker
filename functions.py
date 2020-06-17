@@ -12,6 +12,7 @@ def open_chrome(site):
 
 
 def login(driver, user, pwd):
+    #type uder snd pwd at the login page
     load = ''
     while load != 'completed':
         try:
@@ -22,16 +23,14 @@ def login(driver, user, pwd):
             load = 'completed'
         except:
             time.sleep(2)
-
     enter_button = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[4]/button/div')
     enter_button.click()
     time.sleep(3)
           
-    #handle popup 
+    #If after 15 seconds the popup does not apear then the loging falied
     load = ''
     counter = 0
     while True:
-        #If after 15 seconds the popup does not apear then the loging falied
         try:
             notification_popup = driver.find_element_by_xpath('//*[name()="button" and @class="aOOlW   HoLwm "]')
             notification_popup.click()
@@ -45,8 +44,7 @@ def login(driver, user, pwd):
             except:
                 pass
                 
-        #Loging falied handler
-        
+        #Loging falied handler. While both popups above does not show on screen, check for message error, like worong password...
             try:
                 Warning_message = driver.find_element_by_xpath('//*[@id="slfErrorAlert"]')
                 Warning_message = Warning_message.text
@@ -65,15 +63,14 @@ def login(driver, user, pwd):
 def like_posts(driver, qty):
     posts_liked = 0
     while posts_liked <= qty:
-        #Find loaded Hearts in the chrome and add them in a list
+        #Find loaded Hearts in the Instagram page. This line is for English version that why we have the "Like"
         hearts = driver.find_elements_by_xpath('//*[name()="svg" and @fill="#262626" and @aria-label="Like"]')
-        #hearts = driver.find_elements_by_xpath('//*[name()="svg" and @fill="#ed4956" and @aria-label="Descurtir"]')
+        #If nothing is found look for hearts using the Portuguese version
         if len(hearts) == 0:
             hearts = driver.find_elements_by_xpath('//*[name()="svg" and @fill="#262626" and @aria-label="Curtir"]')
 
         hearts_qty = len(hearts)
-
-        #chek if there more white hearts to click, if not, close the program
+        #check if there more white hearts to click, if not, close the program
         if hearts_qty == 0:
             posts_liked = str(posts_liked)
             return posts_liked + " posts foram curtidos dessa vez!"

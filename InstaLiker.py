@@ -17,7 +17,7 @@ class LoginScreen(BoxLayout):
     def insta_login(self):
         email = self.email_field.text
         pwd = self.pwd_field.text
-        #check if info were provided
+        #check if user info were provided
         if email == '': 
             self.popup_message("Erro!", "Digite seu email")
         elif len(pwd) < 6:
@@ -32,7 +32,7 @@ class LoginScreen(BoxLayout):
                 action = like_posts(driver, 300)
                 self.popup_message("Insta Liker", action)
 
-
+    #Creates popup messages 
     def popup_message(self, msg_type, message):
         popup = Popup(title= msg_type,
             content=Label(text= message),
