@@ -18,6 +18,6 @@ https://www.taskforbot.com.br/demo/instaliker
 ### Watch a demo
 There is a demo video on youtube where you can see it running. Click on image below <br>
 
-[![Instaliker with Python and Kivy](http://img.youtube.com/vi/MphLLoV4x1U/0.jpg)](http://www.youtube.com/watch?v=MphLLoV4x1U "InstaLiker")
+[![Instaliker with Python and Kivy](https://github.com/alexdominguess/InstaLiker-Python-Kivy/blob/master/screenshots/youtube_image.png)](http://www.youtube.com/watch?v=MphLLoV4x1U "InstaLiker")
 
 
