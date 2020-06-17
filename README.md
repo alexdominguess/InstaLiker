@@ -3,14 +3,15 @@
 
 Here is the screen shot of the app
 <br>
-<img src = "Instaliker Tela.PNG" widht="252" height="256">
+<img src = "screenshots/Instaliker Tela.PNG" widht="252" height="256">
 <br><br>
 
 Also there is a web page I created for this app to make it avaliable for non developers (Only in Portuguese)
 https://www.taskforbot.com.br/demo/instaliker
 
-There is a demo video on youtube where you can see it running <br>
-https://youtu.be/MphLLoV4x1U
+There is a demo video on youtube where you can see it running. Click on image below <br>
+
+[![Instaliker with Python and Kivy](http://img.youtube.com/vi/MphLLoV4x1U/0.jpg)](http://www.youtube.com/watch?v=MphLLoV4x1U "InstaLiker")
 
 
 **About the app**<br>
