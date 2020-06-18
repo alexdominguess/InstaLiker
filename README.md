@@ -11,7 +11,8 @@ Here is the screenshot
 
 
 ### Webepage
-Also there is a web page I created for this app to make it avaliable for non developers (Only in Portuguese)
+Also there is a web page I created for this app to an exe file ready to install (Only in Portuguese)
+
 https://www.taskforbot.com.br/demo/instaliker
 
 
